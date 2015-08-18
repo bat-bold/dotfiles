@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+export ZSH=$HOME/.dotfiles/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.dotfiles/.vim/bundle/Vundle.vim
+ln -s .vimrc $HOME/.vimrc
+ln -s .xvimrc $HOME/.xvimrc
+ln -s .zshrc $HOME/.zshrc
+ln -s bb-colemak .oh-my-zsh/custom/plugins/bb-colemak
+vim +PluginInstall +qall
