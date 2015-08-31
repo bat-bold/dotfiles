@@ -22,5 +22,7 @@ bindkey -a f vi-forward-word-end
 bindkey -a F vi-forward-blank-word-end
 bindkey -a t vi-find-next-char
 bindkey -a T vi-find-prev-char
+bindkey -a g vi-find-next-char-skip
+bindkey -a G vi-find-prev-char-skip
 
 lesskey $ZSH/custom/plugins/bb-colemak/colemak-less
