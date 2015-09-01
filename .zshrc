@@ -125,7 +125,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-if type "$brew" > /dev/null; then
+if type "brew" > /dev/null; then
 	source $(brew --prefix nvm)/nvm.sh
 	export PATH=/usr/local/sbin:$PATH
 fi
