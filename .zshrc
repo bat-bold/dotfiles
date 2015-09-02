@@ -116,9 +116,12 @@ function TRAPINT() {
 #
 ##RPROMPT='${vim_mode}'
 
-local ret_status="%(?:%{$fg_bold[green]%}=> :%{$fg_bold[red]%}=> %s)"
-PROMPT='%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}$(pwd_home|grep --color=always /)%b%{$reset_color%}
-${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+local ret_status="%(?:%{$fg_bold[green]%}=>:%{$fg_bold[red]%}=>%s)"
+#PROMPT='%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}$(pwd_home|grep --color=always /)%b%{$reset_color%}
+#${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
+PROMPT='%{$fg[blue]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[blue]%}$(pwd)
+${ret_status}%{$fg_bold[blue]%} $(git_prompt_info)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
