@@ -46,7 +46,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew vi-mode docker docker-compose sbt scala vagrant bb-colemak)
+plugins=(git brew vi-mode docker docker-compose sbt scala vagrant bb-colemak zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,3 +135,14 @@ fi
 
 #ITerm 24bit color support
 export ITERM_24BIT=1
+
+# Enable autosuggestions automatically.
+zle-line-init(){
+	zle autosuggest-start
+}
+zle -N zle-line-init
+
+bindkey '^[[1;2C' forward-word
+bindkey '^[[1;2D' backward-word
+bindkey '^[[C' end-of-line
+bindkey '^[[D' beginning-of-line
