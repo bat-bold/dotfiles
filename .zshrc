@@ -142,7 +142,7 @@ zle-line-init(){
 }
 zle -N zle-line-init
 
-bindkey '^[[1;2C' forward-word
-bindkey '^[[1;2D' backward-word
-bindkey '^[[C' end-of-line
-bindkey '^[[D' beginning-of-line
+bindkey '^[[1;2C' forward-word # shift + right arrow
+bindkey '^[[1;2D' backward-word # shift + left arrow
+bindkey '^[[C' end-of-line # command + right arrow
+bindkey '^[[D' beginning-of-line # command + left arrow
