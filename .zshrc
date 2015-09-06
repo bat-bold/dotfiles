@@ -1,3 +1,6 @@
+# Path to your oh-my-zsh installation.
+# # export ZSH=$HOME/.dotfiles/.oh-my-zsh
+export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -43,9 +46,9 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew vi-mode docker docker-compose sbt scala vagrant bb-colemak)
+plugins=(git brew vi-mode bb-colemak)
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/.oh-my-zsh.sh
 
 # User configuration
 
