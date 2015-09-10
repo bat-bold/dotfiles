@@ -25,4 +25,4 @@ bindkey -a T vi-find-prev-char
 bindkey -a g vi-find-next-char-skip
 bindkey -a G vi-find-prev-char-skip
 
-lesskey $ZSH/custom/plugins/bb-colemak/colemak-less
+# lesskey $ZSH/custom/plugins/bb-colemak/colemak-less # lesskey file not found osx
