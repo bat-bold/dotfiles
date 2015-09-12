@@ -83,6 +83,12 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:"
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 
+# Enable autosuggestions automatically.
+zle-line-init(){
+	zle autosuggest-start
+}
+zle -N zle-line-init
+
 function pwd_home {
 	echo ${PWD/$HOME/"~"}
 }
@@ -135,12 +141,6 @@ fi
 
 #ITerm 24bit color support
 export ITERM_24BIT=1
-
-# Enable autosuggestions automatically.
-zle-line-init(){
-	zle autosuggest-start
-}
-zle -N zle-line-init
 
 bindkey '^[^[[C' forward-word # shift + right arrow
 bindkey '^[^[[D' backward-word # shift + left arrow

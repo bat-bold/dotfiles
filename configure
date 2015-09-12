@@ -13,6 +13,9 @@ ln -nsf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -nsf $HOME/.dotfiles/.ideavimrc $HOME/.ideavimrc
 ln -nsf $HOME/.dotfiles/bb-colemak $HOME/.dotfiles/.oh-my-zsh/custom/plugins/bb-colemak
 
+ln -nsf $HOME/.dotfiles/fishshell/config.fish $HOME/.config/fish/config.fish
+ln -nsf $HOME/.dotfiles/fishshell/functions $HOME/.config/fish/functions
+
 vim +PluginInstall +qall
 chsh -s /bin/zsh
 
