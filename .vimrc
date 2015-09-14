@@ -8,6 +8,9 @@ let currentdir = substitute(s:path,".vimrc","","")
 exec 'source '.colemakvim
 syntax on
 
+" Needs when using fish shell otherwise errors produced
+set shell=/bin/bash
+
 " Bundle config start
 set nocompatible
 filetype off
