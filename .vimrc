@@ -16,8 +16,9 @@ exec 'set rtp+='.currentdir.'.vim/bundle/Vundle.vim'
 ":echom &rtp
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-" All of plugins must added here (before call vundle#end())
+Plugin 'ekalinin/Dockerfile.vim'
 Bundle 'chase/vim-ansible-yaml'
+" All of plugins must added here (before call vundle#end())
 call vundle#end()
 filetype plugin indent on
 " Bundle config end
