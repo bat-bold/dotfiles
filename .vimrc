@@ -4,17 +4,16 @@ let s:path = resolve(expand('<sfile>:p'))
 let colemakvim = substitute(s:path,".vimrc",".colemak-vimrc","")
 " Current dir
 let currentdir = substitute(s:path,".vimrc","","")
-":echom currentdir
+" :echom currentdir
 exec 'source '.colemakvim
 syntax on
 
 " Bundle config start
 set nocompatible
 filetype off
-exec 'set rtp+='.currentdir.'.vim'
 exec 'set rtp+='.currentdir.'.vim/bundle/Vundle.vim'
-":echom &rtp
-call vundle#begin()
+" :echom &rtp
+call vundle#begin(currentdir.'.vim/bundle')
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Bundle 'chase/vim-ansible-yaml'
