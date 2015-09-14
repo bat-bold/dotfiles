@@ -17,5 +17,5 @@ ln -nsf $HOME/.dotfiles/fishshell/config.fish $HOME/.config/fish/config.fish
 ln -nsf $HOME/.dotfiles/fishshell/functions $HOME/.config/fish/functions
 
 vim +PluginInstall +qall
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 
