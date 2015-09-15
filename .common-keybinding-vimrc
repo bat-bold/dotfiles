@@ -1,0 +1,6 @@
+let mapleader = " "
+nnoremap <silent> <leader>h :wincmd h<CR>
+nnoremap <silent> <leader>n :wincmd j<CR>
+nnoremap <silent> <leader>e :wincmd k<CR>
+nnoremap <silent> <leader>i :wincmd l<CR>
+nnoremap <silent> <leader>k :q<CR>
