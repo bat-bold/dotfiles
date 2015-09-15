@@ -2,10 +2,13 @@
 let s:path = resolve(expand('<sfile>:p'))
 " .colemak-vimrc file path
 let colemakvim = substitute(s:path,".vimrc",".colemak-vimrc","")
+" .common-keybinding-vimrc file path
+let commonvim = substitute(s:path,".vimrc",".common-keybinding-vimrc","")
 " Current dir
 let currentdir = substitute(s:path,".vimrc","","")
 " :echom currentdir
 exec 'source '.colemakvim
+exec 'source '.commonvim
 syntax on
 
 " Needs when using fish shell otherwise errors produced

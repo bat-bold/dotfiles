@@ -1,3 +1,4 @@
 source ~/.dotfiles/.colemak-vimrc
+source ~/.dotfiles/.common-keybinding-vimrc
 set visualbell
 set showmode
