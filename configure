@@ -11,6 +11,7 @@ ln -nsf $HOME/.dotfiles/.vimrc $HOME/.vimrc
 ln -nsf $HOME/.dotfiles/.xvimrc $HOME/.xvimrc
 ln -nsf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -nsf $HOME/.dotfiles/.ideavimrc $HOME/.ideavimrc
+ln -nsf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -nsf $HOME/.dotfiles/bb-colemak $HOME/.dotfiles/.oh-my-zsh/custom/plugins/bb-colemak
 
 ln -nsf $HOME/.dotfiles/fishshell/config.fish $HOME/.config/fish/config.fish
