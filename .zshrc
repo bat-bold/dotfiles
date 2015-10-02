@@ -146,3 +146,5 @@ bindkey '^[^[[C' forward-word # shift + right arrow
 bindkey '^[^[[D' backward-word # shift + left arrow
 bindkey '^[[1;2C' end-of-line # command + right arrow
 bindkey '^[[1;2D' beginning-of-line # command + left arrow
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
