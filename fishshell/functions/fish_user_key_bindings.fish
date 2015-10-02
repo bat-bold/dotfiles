@@ -64,6 +64,14 @@ function fish_user_key_bindings
 	bind f forward-word
 	bind F forward-bigword
 
+	bind --erase t
+	bind t forward-jump
+	bind T backward-jump
+
+	bind --erase g
+	bind g forward-jump
+	bind G backward-jump
+
 	#bind --erase \x1b\x5b\x43
 	#bind --erase \x1b\x5b\x44
 	#bind -M insert \c\x43 forward-word  force-repaint
