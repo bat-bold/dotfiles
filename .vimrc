@@ -30,6 +30,7 @@ exec 'set rtp+='.currentdir.'.vim/bundle/Vundle.vim'
 call vundle#begin(currentdir.'.vim/bundle')
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'evanmiller/nginx-vim-syntax'
 Bundle 'chase/vim-ansible-yaml'
 " All of plugins must added here (before call vundle#end())
 call vundle#end()
