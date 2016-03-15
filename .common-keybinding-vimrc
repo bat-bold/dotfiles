@@ -1,6 +1,6 @@
 let mapleader = " "
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>n :wincmd j<CR>
-nnoremap <leader>e :wincmd k<CR>
-nnoremap <leader>i :wincmd l<CR>
-nnoremap <leader>k :q<CR>
+nnoremap <leader>h <C-W>h
+nnoremap <leader>n <C-W>j
+nnoremap <leader>e <C-W>k
+nnoremap <leader>i <C-W>l
+nnoremap <leader>c <C-W>c
