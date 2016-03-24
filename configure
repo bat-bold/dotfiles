@@ -35,13 +35,18 @@ if [[ $platform == 'osx' ]]; then
   brew install wdiff --with-gettext
   brew install wget
 elif [[ $platform == 'linux' ]]; then
+  echo "It is linux, so no need to install gnu utils."
 fi
 
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
+rm -rf $HOME/.dotfiles/.oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.dotfiles/.oh-my-zsh
+rm -rf $HOME/.dotfiles/.vim/bundle/Vundle.vim
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.dotfiles/.vim/bundle/Vundle.vim
+rm -rf $HOME/.dotfiles/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/tarruda/zsh-autosuggestions.git $HOME/.dotfiles/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+rm -rf $HOME/.dotfiles/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.dotfiles/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 ln -nsf $HOME/.dotfiles/.vimrc $HOME/.vimrc

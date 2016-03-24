@@ -1,6 +1,9 @@
 fish_vi_mode
 
-if status --is-interactive
-  set PATH $PATH /usr/local/opt/coreutils/libexec/gnubin
-  set MANPATH $MANPATH /usr/local/opt/coreutils/libexec/gnuman
+if status --is-interactive 
+  if test (uname) = "Darwin"
+    set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH 
+    set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+  end
 end
+
