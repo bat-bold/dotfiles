@@ -21,6 +21,7 @@ if status --is-interactive
     set MANPATH /usr/local/opt/watch/share/man $MANPATH
     set MANPATH /usr/local/opt/wdiff/share/man $MANPATH
     set MANPATH /usr/local/opt/wget/share/man $MANPATH
+    set MANPATH /usr/local/opt/fswatch/share/man $MANPATH
   end
 end
 
