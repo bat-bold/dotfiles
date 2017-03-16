@@ -1,5 +1,7 @@
 fish_vi_key_bindings
 
+set -g -x SBT_OPTS "-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
+
 if status --is-interactive 
   if test (uname) = "Darwin" # only on when running in mac osx
     # PATH config for Postgres.app from https://postgresapp.com
@@ -10,4 +12,3 @@ if status --is-interactive
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
   end
 end
-
