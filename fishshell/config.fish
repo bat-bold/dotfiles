@@ -1,4 +1,5 @@
-fish_vi_key_bindings
+
+fish_vi_key_bindings insert
 
 set -g -x SBT_OPTS "-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
