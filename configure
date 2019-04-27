@@ -12,27 +12,25 @@ fi
 echo "Current os type is $platform"
 
 if [[ $platform == 'osx' ]]; then
-  # Some packages need following tap
-  brew tap homebrew/dupes
   # --with-default-names will replace default osx's commands.
   # corutils packages need some environment variables that is 
   # set in 'fishshell/config.fish' file
   brew install coreutils
   brew install binutils
   brew install diffutils
-  brew install ed --with-default-names
-  brew install findutils --with-default-names
+  brew install ed 
+  brew install findutils
   brew install gawk
-  brew install gnu-indent --with-default-names
-  brew install gnu-sed --with-default-names
-  brew install gnu-tar --with-default-names
-  brew install gnu-which --with-default-names
+  brew install gnu-indent
+  brew install gnu-sed
+  brew install gnu-tar
+  brew install gnu-which
   brew install gnutls
-  brew install grep --with-default-names
+  brew install grep
   brew install gzip
   brew install screen
   brew install watch
-  brew install wdiff --with-gettext
+  brew install wdiff
   brew install wget
 elif [[ $platform == 'linux' ]]; then
   echo "It is linux, so no need to install gnu utils."
@@ -56,10 +54,11 @@ ln -nsf $HOME/.dotfiles/.ideavimrc $HOME/.ideavimrc
 ln -nsf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -nsf $HOME/.dotfiles/bb-colemak $HOME/.dotfiles/.oh-my-zsh/custom/plugins/bb-colemak
 
-mkdir -p $HOME/.config $HOME/.config/fish 
+mkdir -p $HOME/.config $HOME/.config/fish $HOME/.config/fish/functions
 
 ln -nsf $HOME/.dotfiles/fishshell/config.fish $HOME/.config/fish/config.fish
-ln -nsf $HOME/.dotfiles/fishshell/functions $HOME/.config/fish/functions
+ln -nsf $HOME/.dotfiles/fishshell/functions/fish_prompt.fish $HOME/.config/fish/functions/fish_prompt.fish
+ln -nsf $HOME/.dotfiles/fishshell/functions/fish_user_key_bindings.fish $HOME/.config/fish/functions/fish_user_key_bindings.fish
 
 vim +PluginInstall +qall
 
