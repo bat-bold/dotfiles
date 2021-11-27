@@ -46,5 +46,9 @@ if status --is-interactive
       set PATH /usr/local/opt/grep/libexec/gnubin $PATH
     end
 
+    if test -d /usr/local/opt/node@16/bin
+      set PATH /usr/local/opt/node@16/bin $PATH
+    end
+
   end
 end
