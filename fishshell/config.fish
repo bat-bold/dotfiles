@@ -11,8 +11,17 @@ if status --is-interactive
     # coreutils manpath config
     set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH 
     set PATH /usr/local/bin $PATH 
+    set PATH /usr/local/sbin $PATH 
     set MANPATH /usr/local/opt/*/share/man $MANPATH
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+
+    #Android SDK
+    if test -d $HOME/Library/Android/sdk
+      set -Ux ANDROID_SDK $HOME/Library/Android/sdk
+      set PATH $ANDROID_SDK/tools $PATH
+      set PATH $ANDROID_SDK/tools/bin $PATH
+      set PATH $ANDROID_SDK/emulator $PATH
+    end
 
     #make gnu utils available
     if test -d /usr/local/opt/ed/libexec/gnubin
@@ -37,8 +46,5 @@ if status --is-interactive
       set PATH /usr/local/opt/grep/libexec/gnubin $PATH
     end
 
-    if test -d /usr/local/opt/node@12/bin
-      set PATH /usr/local/opt/node@12/bin $PATH
-    end
   end
 end
