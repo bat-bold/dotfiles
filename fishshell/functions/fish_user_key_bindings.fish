@@ -1,7 +1,7 @@
 function fish_user_key_bindings
 
-    bind -s --user -M insert \e\x7F backward-kill-word force-repaint
-    bind -s --user -M insert \ef forward-word force-repaint
+    bind -s --user -M insert \e\x7F backward-kill-word
+    bind -s --user -M insert \ef forward-word
 
     # The default escape timeout is 300ms. But for users of Vi bindings that can be slightly
     # annoying when trying to switch to Vi "normal" mode. So set a shorter timeout in this case
