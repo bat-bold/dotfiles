@@ -23,6 +23,11 @@ if status --is-interactive
       set PATH $ANDROID_SDK/emulator $PATH
     end
 
+    #config for golang
+    set -x GOPATH $HOME/golang
+    set -x GOROOT /usr/local/opt/go/libexec
+    set PATH $GOPATH/bin $GOROOT/bin $PATH
+
     #make gnu utils available
     if test -d /usr/local/opt/ed/libexec/gnubin
       set PATH /usr/local/opt/ed/libexec/gnubin $PATH
