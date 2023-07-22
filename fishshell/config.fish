@@ -51,5 +51,11 @@ if status --is-interactive
       set PATH /usr/local/opt/grep/libexec/gnubin $PATH
     end
 
+    #Rust environment
+    set PATH $HOME/.cargo/bin $PATH
+
   end
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
