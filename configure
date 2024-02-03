@@ -3,8 +3,10 @@
 #check os type
 platform='unknown'
 unamestr=`uname`
+ubuntu_linux=0
 if [[ "$unamestr" == 'Linux' ]]; then
   platform='linux'
+  ubuntu_linux=[[ `uname -a`==*"Ubuntu"* ]]
 elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='osx'
 fi
@@ -32,8 +34,15 @@ if [[ $platform == 'osx' ]]; then
   brew install watch
   brew install wdiff
   brew install wget
+  brew install fzf
+  brew install bat
 elif [[ $platform == 'linux' ]]; then
   echo "It is linux, so no need to install gnu utils."
+  if [[ $ubuntu_linux ]]; then
+    echo Ubuntu linux
+    sudo apt install fzf
+    sudo apt install bat
+  fi
 fi
 
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
