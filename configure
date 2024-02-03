@@ -42,6 +42,10 @@ elif [[ $platform == 'linux' ]]; then
     echo Ubuntu linux
     sudo apt install fzf
     sudo apt install bat
+
+    # by default, bat is installed as batcat
+    #https://github.com/sharkdp/bat/issues/1420#issuecomment-949195736
+    sudo ln -s /usr/bin/batcat /usr/local/bin/bat
   fi
 fi
 
