@@ -4,7 +4,7 @@
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 #install `bass` for nvm
-fisher install edc/bass
+#fisher install edc/bass
 
 #fisher install jorgebucaran/nvm.fish
 
