@@ -15,6 +15,10 @@ if status --is-interactive
     set MANPATH /usr/local/opt/*/share/man $MANPATH
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
+    #Homebrew
+    set PATH /opt/homebrew/bin $PATH
+    set PATH /opt/homebrew/sbin $PATH
+
     #Android SDK
     if test -d $HOME/Library/Android/sdk
       set -Ux ANDROID_SDK $HOME/Library/Android/sdk
