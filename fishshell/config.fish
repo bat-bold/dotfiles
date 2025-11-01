@@ -60,10 +60,6 @@ if status --is-interactive
 
     test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-    #NVM - node version manager
-    # You must call it on initialization or listening to directory switching won't work
-    # load_nvm > /dev/stderr
-
   end
 end
 
