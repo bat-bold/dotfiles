@@ -36,6 +36,8 @@ if [[ $platform == 'osx' ]]; then
   brew install wget
   brew install fzf
   brew install bat
+  #install `bass` for nvm
+  brew install bass
 elif [[ $platform == 'linux' ]]; then
   echo "It is linux, so no need to install gnu utils."
   if [[ $ubuntu_linux ]]; then
@@ -73,6 +75,9 @@ ln -nsf $HOME/.dotfiles/fishshell/config.fish $HOME/.config/fish/config.fish
 ln -nsf $HOME/.dotfiles/fishshell/functions/fish_prompt.fish $HOME/.config/fish/functions/fish_prompt.fish
 ln -nsf $HOME/.dotfiles/fishshell/functions/fish_user_key_bindings.fish $HOME/.config/fish/functions/fish_user_key_bindings.fish
 ln -nsf $HOME/.dotfiles/fishshell/functions/fish_remove_path.fish $HOME/.config/fish/functions/fish_remove_path.fish
+ln -nsf $HOME/.dotfiles/fishshell/functions/nvm.fish $HOME/.config/fish/functions/nvm.fish
+ln -nsf $HOME/.dotfiles/fishshell/functions/nvm_find_nvmrc.fish $HOME/.config/fish/functions/nvm_find_nvmrc.fish
+ln -nsf $HOME/.dotfiles/fishshell/functions/load_nvm.fish $HOME/.config/fish/functions/load_nvm.fish
 
 vim +PluginInstall +qall
 
