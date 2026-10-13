@@ -10,6 +10,7 @@ function fish_user_key_bindings
     or set -g fish_escape_delay_ms 100
 
     set -l init_mode insert
+
     # These are only the special vi-style keys
     # not end/home, we share those.
     set -l eol_keys \$ d\$ # 'd' was 'g'
@@ -24,9 +25,9 @@ function fish_user_key_bindings
 
     # Inherit shared key bindings.
     # Do this first so vi-bindings win over default.
-    for mode in insert default visual
-        __fish_shared_key_bindings -M $mode
-    end
+    # for mode in insert default visual
+    #   __fish_shared_key_bindings -M $mode
+    # end
 
     bind -s --preset -M insert \r execute
     bind -s --preset -M insert \n execute
@@ -85,22 +86,22 @@ function fish_user_key_bindings
 
     # OS X SnowLeopard doesn't have these keys. Don't show an annoying error message.
     # Vi/Vim doesn't support these keys in insert mode but that seems silly so we do so anyway.
-    bind -s --preset -M insert -k home beginning-of-line 2>/dev/null
-    bind -s --preset -M default -k home beginning-of-line 2>/dev/null
-    bind -s --preset -M insert -k end end-of-line 2>/dev/null
-    bind -s --preset -M default -k end end-of-line 2>/dev/null
+    bind -s --preset -M insert home beginning-of-line 2>/dev/null
+    bind -s --preset -M default home beginning-of-line 2>/dev/null
+    bind -s --preset -M insert end end-of-line 2>/dev/null
+    bind -s --preset -M default end end-of-line 2>/dev/null
 
     # Vi moves the cursor back if, after deleting, it is at EOL.
     # To emulate that, move forward, then backward, which will be a NOP
     # if there is something to move forward to.
     bind -s --preset -M default x delete-char forward-char backward-char
     bind -s --preset -M default X backward-delete-char
-    bind -s --preset -M insert -k sc delete-char forward-char backward-char # 'sc' was 'dc'
-    bind -s --preset -M default -k sc delete-char forward-char backward-char # 'sc' was 'dc'
+    #bind -s --preset -M insert sc delete-char forward-char backward-char # 'sc' was 'dc'
+    bind -s --preset -M default sc delete-char forward-char backward-char # 'sc' was 'dc'
 
     # Backspace deletes a char in insert mode, but not in normal/default mode.
-    bind -s --preset -M insert -k backspace backward-delete-char
-    bind -s --preset -M default -k backspace backward-char
+    bind -s --preset -M insert backspace backward-delete-char
+    bind -s --preset -M default backspace backward-char
     bind -s --preset -M insert \ch backward-delete-char
     bind -s --preset -M default \ch backward-char
     bind -s --preset -M insert \x7f backward-delete-char
@@ -150,7 +151,6 @@ function fish_user_key_bindings
 
     bind -s --preset -m insert ct begin-selection forward-jump kill-selection delete-char end-selection force-repaint # 'ct' was 'cf'
     bind -s --preset -m insert cg begin-selection forward-jump kill-selection end-selection force-repaint # 'cg' was 'ct'
-
     bind -s --preset '~' capitalize-word
     bind -s --preset dl downcase-word # 'dl' was 'gu'
     bind -s --preset dL upcase-word # 'dL' was 'gU'
@@ -247,6 +247,5 @@ function fish_user_key_bindings
     # After executing once, this will have defined functions listening for the variable.
     # Therefore it needs to be before setting fish_bind_mode.
     fish_vi_cursor
-
     set fish_bind_mode $init_mode
 end
