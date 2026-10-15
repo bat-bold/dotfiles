@@ -60,6 +60,9 @@ if status --is-interactive
 
     test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
+    #Jetbrains' Toolbox scripts
+    set PATH "/Users/batbold/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
+
   end
 end
 
