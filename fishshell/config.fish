@@ -9,11 +9,9 @@ if status --is-interactive
     # PATH config for Postgres.app from https://postgresapp.com
     set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
     # coreutils manpath config
-    set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH 
-    set PATH /usr/local/bin $PATH 
-    set PATH /usr/local/sbin $PATH 
-    set MANPATH /usr/local/opt/*/share/man $MANPATH
-    set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+    set PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH 
+    set MANPATH /opt/homebrew/opt/*/share/man $MANPATH
+    set MANPATH /opt/homebrew/opt/coreutils/libexec/gnuman $MANPATH
 
     #Homebrew
     set PATH /opt/homebrew/bin $PATH
@@ -33,26 +31,32 @@ if status --is-interactive
     set PATH $GOPATH/bin $GOROOT/bin $PATH
 
     #make gnu utils available
-    if test -d /usr/local/opt/ed/libexec/gnubin
-      set PATH /usr/local/opt/ed/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/binutils/bin
+      set PATH /opt/homebrew/opt/binutils/bin $PATH
     end
-    if test -d /usr/local/opt/findutils/libexec/gnubin
-      set PATH /usr/local/opt/findutils/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/ed/bin
+      set PATH /opt/homebrew/opt/ed/bin $PATH
     end
-    if test -d /usr/local/opt/gnu-indent/libexec/gnubin
-      set PATH /usr/local/opt/gnu-indent/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/findutils/libexec/gnubin
+      set PATH /opt/homebrew/opt/findutils/libexec/gnubin $PATH
     end
-    if test -d /usr/local/opt/gnu-sed/libexec/gnubin
-      set PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/gnu-indent/libexec/gnubin
+      set PATH /opt/homebrew/opt/gnu-indent/libexec/gnubin $PATH
     end
-    if test -d /usr/local/opt/gnu-tar/libexec/gnubin
-      set PATH /usr/local/opt/gnu-tar/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/gnu-sed/libexec/gnubin
+      set PATH /opt/homebrew/opt/gnu-sed/libexec/gnubin $PATH
     end
-    if test -d /usr/local/opt/gnu-which/libexec/gnubin
-      set PATH /usr/local/opt/gnu-which/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/gnu-tar/libexec/gnubin
+      set PATH /opt/homebrew/opt/gnu-tar/libexec/gnubin $PATH
     end
-    if test -d /usr/local/opt/grep/libexec/gnubin
-      set PATH /usr/local/opt/grep/libexec/gnubin $PATH
+    if test -d /opt/homebrew/opt/gnu-which/libexec/gnubin
+      set PATH /opt/homebrew/opt/gnu-which/libexec/gnubin $PATH
+    end
+    if test -d /opt/homebrew/opt/grep/libexec/gnubin
+      set PATH /opt/homebrew/opt/grep/libexec/gnubin $PATH
+    end
+    if test -d /opt/homebrew/opt/gawk/libexec/gnubin
+      set PATH /opt/homebrew/opt/gawk/libexec/gnubin $PATH
     end
 
     #Rust environment
